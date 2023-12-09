@@ -1,22 +1,52 @@
-import React, { ReactElement } from "react";
+import React, { ReactElement } from 'react';
 
-import { AppBar, Toolbar, Typography, Container } from "@mui/material";
+import NextLink from 'next/link';
 
+import { AppBar, Toolbar, Typography, Container, Box } from '@mui/material';
+
+import './globals.css';
 interface Props {
-  children: ReactElement;
+	children: ReactElement;
+	variant?: string;
 }
 
-const Layout = ({ children }: Props) => {
-  return (
-    <>
-      <AppBar position="static">
-        <Toolbar>
-          <Typography variant="h6">Portefolio</Typography>
-        </Toolbar>
-      </AppBar>
-      <Container>{children}</Container>
-    </>
-  );
+const Layout = ({ children, variant }: Props) => {
+	if (variant === 'home') {
+		return (
+			<Box sx={{ position: 'fixed' }}>
+				<AppBar position='static'>
+					<Toolbar>
+						<NextLink href='/' passHref>
+							<Typography
+								variant='h6'
+								component='a'
+								sx={{ cursor: 'pointer', marginRight: 2 }}
+							>
+								Portfolio
+							</Typography>
+						</NextLink>
+						<NextLink href='/Competences' passHref>
+							<Typography variant='h6' component='a' sx={{ cursor: 'pointer' }}>
+								Compétences
+							</Typography>
+						</NextLink>
+					</Toolbar>
+				</AppBar>
+				{children}
+			</Box>
+		);
+	}
+	return (
+		<>
+			<AppBar position='static'>
+				<Toolbar>
+					<Typography variant='h6'>Portfolio</Typography>
+					{/* other pages */}
+				</Toolbar>
+			</AppBar>
+			<Container>{children}</Container>
+		</>
+	);
 };
 
 export default Layout;
