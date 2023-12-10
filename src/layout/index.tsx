@@ -1,18 +1,17 @@
 import React, { ReactElement } from "react";
 
-import NextLink from "next/link";
-
-import { AppBar, Toolbar, Typography, Container, Box } from "@mui/material";
+import { Container } from "@mui/material";
 
 import Header from "./Header";
 
 import "./globals.css";
+
 interface Props {
+	children: any;
 	variant: "main" | "home" | "blank";
-	children: ReactElement;
 }
 
-const Layout = ({ variant = "main", children }: Props) => {
+const Layout = ({ children, variant = "main" }: Props) => {
 	if (variant === "blank") {
 		return { children };
 	}

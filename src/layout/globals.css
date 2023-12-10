@@ -1,11 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Monoton&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
 
-a{
-    text-decoration: none;
-    color: black;
-}
-
 * {
     margin: 0;
     padding: 0;

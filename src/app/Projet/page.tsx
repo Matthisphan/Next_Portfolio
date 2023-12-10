@@ -30,42 +30,17 @@ const Projet = () => {
 	return (
 		<Layout variant='main'>
 			<Page title='Projet'>
-				{/* <Card> */}
 				<Box sx={{ borderBottom: 1, borderColor: "divider", width: "100%" }}>
 					<Tabs
 						value={value}
 						onChange={handleChange}
 						variant='scrollable'
 						scrollButtons='auto'
-						aria-label='account profile tab'
 					>
-						<Tab
-							label='Tous'
-							// icon={<UserOutlined />}
-							value='all'
-							iconPosition='start'
-						/>
-
-						<Tab
-							label='Jeux'
-							// icon={<UserOutlined />}
-							value='jeux'
-							iconPosition='start'
-						/>
-
-						<Tab
-							label='Site Web'
-							// icon={<UserOutlined />}
-							value='web'
-							iconPosition='start'
-						/>
-
-						<Tab
-							label='Production Graphique'
-							// icon={<UserOutlined />}
-							value='product_graph'
-							iconPosition='start'
-						/>
+						<Tab label='Tous' value='all' />
+						<Tab label='Jeux' value='jeux' />
+						<Tab label='Site Web' value='web' />
+						<Tab label='Production Graphique' value='product_graph' />
 					</Tabs>
 				</Box>
 				<TabProjects typeSelected={value} />

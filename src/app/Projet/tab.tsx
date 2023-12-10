@@ -44,39 +44,43 @@ const TabProjects = ({ typeSelected }: { typeSelected: string }) => {
 			type: "product_graph",
 		},
 	];
+
 	return (
 		<Grid container spacing={2}>
 			{listOfProject.map((project) => {
 				if (project.type == typeSelected || typeSelected == "all") {
 					return (
 						<Grid item xs={12} md={4}>
-							<Card sx={{ height: "100%", maxWidth: 345 }}>
+							<Card
+								sx={{ height: "100%", maxWidth: 345 }}
+								onClick={() => window.open(project.href, "_blank")}
+							>
 								<CardActionArea sx={{ height: "100%" }}>
-									<a href={project.href} target='_blank'>
-										<CardMedia
-											component='img'
-											height='140'
-											image={`/images/${project.image}`}
-											alt={project.title}
-										/>
-										<CardContent>
-											<Typography
-												gutterBottom
-												variant='h5'
-												component='div'
-												fontFamily={"fantasy"}
-											>
-												{project.title}
-											</Typography>
-											<Typography
-												variant='body2'
-												color='text.secondary'
-												fontFamily={"Poppins"}
-											>
-												{project.description}
-											</Typography>
-										</CardContent>
-									</a>
+									<CardMedia
+										component='img'
+										height='140'
+										image={`/images/${project.image}`}
+										alt={project.title}
+									/>
+									<CardContent>
+										<Typography
+											gutterBottom
+											variant='h5'
+											component='div'
+											fontFamily='fantasy'
+											justifyContent='justify'
+										>
+											{project.title}
+										</Typography>
+										<Typography
+											variant='body2'
+											color='text.secondary'
+											fontFamily='Poppins'
+											justifyContent='justify'
+										>
+											{project.description}
+										</Typography>
+									</CardContent>
 								</CardActionArea>
 							</Card>
 						</Grid>
