@@ -6,17 +6,9 @@ import Layout from "@/layout";
 
 import Page from "@/components/Page";
 
-import {
-	Grid,
-	Typography,
-	Card,
-	CardMedia,
-	Box,
-	Button,
-	Tabs,
-	Tab,
-	CardContent,
-} from "@mui/material";
+import { Grid, Card, CardContent } from "@mui/material";
+
+import FormContact from "./form";
 
 const Contact = () => {
 	return (
@@ -24,12 +16,14 @@ const Contact = () => {
 			<Page title='Contact'>
 				<Grid container spacing={2}>
 					<Grid item xs={12} lg={6}>
-						<Typography variant='h1' component='h1' gutterBottom>
-							Contact
-						</Typography>
-						<Typography variant='h5' component='h2' gutterBottom>
-							Email :
-						</Typography>
+						<iframe src='CV_PHAN_Matthis.pdf' width='100%' height='850' />
+					</Grid>
+					<Grid item xs={12} lg={6}>
+						<Card>
+							<CardContent>
+								<FormContact />
+							</CardContent>
+						</Card>
 					</Grid>
 				</Grid>
 			</Page>
