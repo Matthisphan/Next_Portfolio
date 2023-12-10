@@ -1,8 +1,6 @@
 "use client";
 
-import React, { useEffect, useState, SyntheticEvent } from "react";
-
-import { useRouter } from "next/navigation";
+import React, { useState, SyntheticEvent } from "react";
 
 import Layout from "@/layout";
 
@@ -20,29 +18,17 @@ import {
 	CardContent,
 } from "@mui/material";
 
-import TabBasic from "../basic";
-import TabJeux from "../jeux";
-import TabWeb from "../web";
-import TabProduc from "../production_web";
+import TabProjects from "./tab";
 
-const Projet = ({ params }: { params: any }) => {
-	const router = useRouter();
-
-	const [tab, setTab] = useState(params.tab);
-
-	useEffect(() => {
-		setTab(params.tab);
-	}, [params]);
-
-	const [value, setValue] = useState(tab);
+const Projet = () => {
+	const [value, setValue] = useState("all");
 
 	const handleChange = (event: SyntheticEvent, newValue: string) => {
 		setValue(newValue);
-		router.push(`/Projet/${newValue}`);
 	};
 
 	return (
-		<Layout>
+		<Layout variant='main'>
 			<Page title='Projet'>
 				<Card>
 					<Box sx={{ borderBottom: 1, borderColor: "divider", width: "100%" }}>
@@ -56,7 +42,7 @@ const Projet = ({ params }: { params: any }) => {
 							<Tab
 								label='Tous'
 								// icon={<UserOutlined />}
-								value='basic'
+								value='all'
 								iconPosition='start'
 							/>
 
@@ -84,11 +70,7 @@ const Projet = ({ params }: { params: any }) => {
 					</Box>
 					<CardContent>
 						<Box sx={{ mt: 2.5 }}>
-							{tab === "basic" && <TabBasic />}
-							{tab === "jeux" && <TabJeux />}
-							{tab === "web" && <TabWeb />}
-							{tab === "product_graph" && <TabProduc />}
-							{/* {tab === "personal" && <TabPersonal />} */}
+							<TabProjects typeSelected={value} />
 						</Box>
 					</CardContent>
 				</Card>
