@@ -20,6 +20,7 @@ import {
 } from "@mui/material";
 
 import TabBasic from "../basic";
+import TabJeux from "../jeux";
 
 const Projet = ({ params }: { params: any }) => {
 	const router = useRouter();
@@ -49,16 +50,37 @@ const Projet = ({ params }: { params: any }) => {
 								value='basic'
 								iconPosition='start'
 							/>
+
 							<Tab
-								label='jeux'
+								label='Jeux'
 								// icon={<UserOutlined />}
 								value='jeux'
 								iconPosition='start'
 							/>
+
+							<Tab
+							label='Site Web'
+							// icon={<UserOutlined />}
+							value='web'
+							iconPosition='start'
+							/>
+
+							<Tab
+								label='Production Graphique'
+								// icon={<UserOutlined />}
+								value='produc_graph'
+								iconPosition='start'
+							/>
+							
 						</Tabs>
 					</Box>
 					<Box sx={{ mt: 2.5 }}>
 						{tab === "basic" && <TabBasic />}
+						{/* {tab === "personal" && <TabPersonal />} */}
+					</Box>
+
+					<Box sx={{ mt: 2.5 }}>
+						{tab === "jeux" && <TabJeux />}
 						{/* {tab === "personal" && <TabPersonal />} */}
 					</Box>
 				</Card>
