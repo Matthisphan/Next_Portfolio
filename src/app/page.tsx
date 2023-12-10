@@ -45,8 +45,8 @@ export default function Home() {
 	return (
 		<Layout variant='home'>
 			<Page title='Home'>
-				<Grid container sx={{ margin: 0 }}>
-					<Grid item xs={12} lg={6}>
+				<Grid container sx={{ margin: 0, padding:0}}>
+					<Grid item xs={12} lg={6} >
 						<Box
 							sx={{
 								padding: '20px',
@@ -72,11 +72,6 @@ export default function Home() {
 						<Card
 							sx={{
 								height: '100vh',
-								// top: 0,
-								// left: '50%',
-								// position: 'absolute',
-								// width: '50%',
-								// background: 'rgba(0, 0, 0, 0.25)',
 								borderRadius: '0 0 0 0px',
 							}}
 						>
