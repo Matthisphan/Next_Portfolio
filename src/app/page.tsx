@@ -29,6 +29,7 @@ const Description = () => {
 				component='h2'
 				gutterBottom
 				fontFamily='Poppins'
+				fontSize= '2vh'
 				color='#545454'
 			>
 				Bonjour ! Je suis étudiant en 3ème année de MMI (métiers du multimédia
