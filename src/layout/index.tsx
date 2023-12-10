@@ -29,7 +29,7 @@ const Layout = ({ variant = "main", children }: Props) => {
 	return (
 		<>
 			<Header />
-			<Container>{children}</Container>
+			<Container sx={{ paddingTop: "10vh" }}>{children}</Container>
 		</>
 	);
 };
