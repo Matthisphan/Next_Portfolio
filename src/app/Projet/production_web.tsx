@@ -7,21 +7,21 @@ import {
 	Typography,
 } from "@mui/material";
 
-const TabJeux = () => {
+const TabProduc = () => {
 	const listOfProject = [
 		{
-			image: "img_burn.png",
-			title: "Burn",
+			image: "img_Flynt.png",
+			title: "Flynt",
 			description:
-				"Projet de Terminal codé en python où le but est de survivre le plus longtemps possible tout en esquivant des boules de feu.",
+				"Conception d'un personnage en 3D sur Blender pour la création d'un jeu vidéo en troisème année de BUT MMI",
 		},
 	];
 	return (
 		<Grid container spacing={2}>
 			{listOfProject.map((project) => (
 				<Grid item xs={12} md={4}>
-					<Card sx={{ maxWidth: 345 }}>
-						<CardActionArea>
+					<Card sx={{ height: "100%", maxWidth: 345 }}>
+						<CardActionArea sx={{ height: "100%" }}>
 							<CardMedia
 								component='img'
 								height='140'
@@ -53,4 +53,4 @@ const TabJeux = () => {
 	);
 };
 
-export default TabJeux;
+export default TabProduc;

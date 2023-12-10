@@ -22,6 +22,8 @@ import {
 
 import TabBasic from "../basic";
 import TabJeux from "../jeux";
+import TabWeb from "../web";
+import TabProduc from "../production_web";
 
 const Projet = ({ params }: { params: any }) => {
 	const router = useRouter();
@@ -40,56 +42,58 @@ const Projet = ({ params }: { params: any }) => {
 	};
 
 	return (
-		// <Layout>
-		<Page title='Projet'>
-			<Card>
-				<Box sx={{ borderBottom: 1, borderColor: "divider", width: "100%" }}>
-					<Tabs
-						value={value}
-						onChange={handleChange}
-						variant='scrollable'
-						scrollButtons='auto'
-						aria-label='account profile tab'
-					>
-						<Tab
-							label='Tous'
-							// icon={<UserOutlined />}
-							value='basic'
-							iconPosition='start'
-						/>
+		<Layout>
+			<Page title='Projet'>
+				<Card>
+					<Box sx={{ borderBottom: 1, borderColor: "divider", width: "100%" }}>
+						<Tabs
+							value={value}
+							onChange={handleChange}
+							variant='scrollable'
+							scrollButtons='auto'
+							aria-label='account profile tab'
+						>
+							<Tab
+								label='Tous'
+								// icon={<UserOutlined />}
+								value='basic'
+								iconPosition='start'
+							/>
 
-						<Tab
-							label='Jeux'
-							// icon={<UserOutlined />}
-							value='jeux'
-							iconPosition='start'
-						/>
+							<Tab
+								label='Jeux'
+								// icon={<UserOutlined />}
+								value='jeux'
+								iconPosition='start'
+							/>
 
-						<Tab
-							label='Site Web'
-							// icon={<UserOutlined />}
-							value='web'
-							iconPosition='start'
-						/>
+							<Tab
+								label='Site Web'
+								// icon={<UserOutlined />}
+								value='web'
+								iconPosition='start'
+							/>
 
-						<Tab
-							label='Production Graphique'
-							// icon={<UserOutlined />}
-							value='produc_graph'
-							iconPosition='start'
-						/>
-					</Tabs>
-				</Box>
-				<CardContent>
-					<Box sx={{ mt: 2.5 }}>
-						{tab === "basic" && <TabBasic />}
-						{tab === "jeux" && <TabJeux />}
-						{/* {tab === "personal" && <TabPersonal />} */}
+							<Tab
+								label='Production Graphique'
+								// icon={<UserOutlined />}
+								value='product_graph'
+								iconPosition='start'
+							/>
+						</Tabs>
 					</Box>
-				</CardContent>
-			</Card>
-		</Page>
-		// </Layout>
+					<CardContent>
+						<Box sx={{ mt: 2.5 }}>
+							{tab === "basic" && <TabBasic />}
+							{tab === "jeux" && <TabJeux />}
+							{tab === "web" && <TabWeb />}
+							{tab === "product_graph" && <TabProduc />}
+							{/* {tab === "personal" && <TabPersonal />} */}
+						</Box>
+					</CardContent>
+				</Card>
+			</Page>
+		</Layout>
 	);
 };
 

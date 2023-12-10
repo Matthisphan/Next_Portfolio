@@ -7,13 +7,19 @@ import {
 	Typography,
 } from "@mui/material";
 
-const TabJeux = () => {
+const TabWeb = () => {
 	const listOfProject = [
 		{
-			image: "img_burn.png",
-			title: "Burn",
+			image: "img_cooldown.png",
+			title: "Cooldown",
 			description:
-				"Projet de Terminal codé en python où le but est de survivre le plus longtemps possible tout en esquivant des boules de feu.",
+				"Conception en local d'un réseau social similaire à Twitter en HTML / CSS / JS / PHP / JSON pour un projet de fin de deuxième année en BUT MMI.",
+		},
+		{
+			image: "img_palan_consulting.png",
+			title: "PALAN Consulting",
+			description:
+				"Conception de maquettes détaillées et refonte de la charte graphique à l'aide de Figma et intégration des conceptions élaborées avec WordPress Elementor pour l'entreprise PALAN Consulting",
 		},
 	];
 	return (
@@ -53,4 +59,4 @@ const TabJeux = () => {
 	);
 };
 
-export default TabJeux;
+export default TabWeb;
