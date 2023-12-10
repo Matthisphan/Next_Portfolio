@@ -18,7 +18,7 @@ import {
 	CardContent,
 } from "@mui/material";
 
-import TabProjects from "./tab";
+import TabCompetence from "./tab";
 
 const Projet = () => {
 	const [value, setValue] = useState("all");
@@ -43,7 +43,7 @@ const Projet = () => {
 						<Tab label='Production Graphique' value='product_graph' />
 					</Tabs>
 				</Box>
-				<TabProjects typeSelected={value} />
+				<TabCompetence typeSelected={value} />
 			</Page>
 		</Layout>
 	);
