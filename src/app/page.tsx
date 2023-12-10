@@ -1,11 +1,11 @@
-'use client';
+"use client";
 
-import Layout from '../layout';
+import Layout from "../layout";
 
-import Page from '../components/Page';
+import Page from "../components/Page";
 
-import { Grid, Typography, Card, CardMedia, Box, Button } from '@mui/material';
-import { Download } from '@mui/icons-material';
+import { Grid, Typography, Card, CardMedia, Box, Button } from "@mui/material";
+import { Download } from "@mui/icons-material";
 
 // import Monoton from '/fonts/Monoton-Regular.ttf';
 
@@ -13,9 +13,9 @@ const Description = () => {
 	return (
 		<>
 			<Typography variant='h1' component='h1' gutterBottom fontFamily='fantasy'>
-				<div style={{ display: 'flex' }}>
+				<div style={{ display: "flex" }}>
 					<div style={{ paddingRight: 20 }}>MATTHIS</div>
-					<div style={{ color: '#3E77B6', fontFamily: 'Monoton, sans-serif' }}>
+					<div style={{ color: "#3E77B6", fontFamily: "Monoton, sans-serif" }}>
 						PHAN
 					</div>
 				</div>
@@ -29,7 +29,7 @@ const Description = () => {
 				component='h2'
 				gutterBottom
 				fontFamily='Poppins'
-				fontSize= '2vh'
+				fontSize='2vh'
 				color='#545454'
 			>
 				Bonjour ! Je suis étudiant en 3ème année de MMI (métiers du multimédia
@@ -45,14 +45,14 @@ export default function Home() {
 	return (
 		<Layout variant='home'>
 			<Page title='Home'>
-				<Grid container sx={{ margin: 0, padding:0}}>
-					<Grid item xs={12} lg={6} >
+				<Grid container>
+					<Grid item xs={12} lg={6}>
 						<Box
 							sx={{
-								padding: '20px',
+								padding: "20px",
 								marginLeft: 10,
 								marginRight: 10,
-								textAlign: 'justify',
+								textAlign: "justify",
 								marginTop: 25,
 							}}
 						>
@@ -60,19 +60,19 @@ export default function Home() {
 							<br />
 							<Button
 								variant='contained'
-								endIcon={<Download sx={{ color: 'white' }} />}
+								endIcon={<Download sx={{ color: "white" }} />}
 								size='large'
-								sx={{ borderRadius: 15, color: '#545454' }}
+								sx={{ borderRadius: 15, color: "#545454" }}
 							>
-								<div style={{ color: 'white', fontSize: 20 }}>Mon CV</div>
+								<div style={{ color: "white", fontSize: 20 }}>Mon CV</div>
 							</Button>
 						</Box>
 					</Grid>
 					<Grid item xs={12} lg={6}>
 						<Card
 							sx={{
-								height: '100vh',
-								borderRadius: '0 0 0 0px',
+								height: "100vh",
+								borderRadius: "0 0 0 0px",
 							}}
 						>
 							<CardMedia
