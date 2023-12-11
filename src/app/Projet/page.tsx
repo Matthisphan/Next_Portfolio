@@ -31,6 +31,20 @@ const Projet = () => {
 		<Layout variant='main'>
 			<Page title='Projet'>
 				<Box sx={{ borderBottom: 1, borderColor: "divider", width: "100%" }}>
+					<Typography variant='h1' component='h1' gutterBottom>
+						<div
+							style={{
+								color: "#3E77B6",
+								fontFamily: "Monoton, sans-serif",
+								textAlign: "center",
+								border: "solid black 1px",
+								padding: "2vh",
+								fontSize: "7vh",
+							}}
+						>
+							PROJETS
+						</div>
+					</Typography>
 					<Tabs
 						value={value}
 						onChange={handleChange}
