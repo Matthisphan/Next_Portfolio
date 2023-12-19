@@ -62,7 +62,7 @@ export default function Home() {
 								variant='contained'
 								endIcon={<Download sx={{ color: "white" }} />}
 								size='large'
-								sx={{ borderRadius: 15, color: "#545454" }}
+								sx={{ borderRadius: 15, color: "#545454", display: "none" }}
 							>
 								<div style={{ color: "white", fontSize: 20 }}>Mon CV</div>
 							</Button>
